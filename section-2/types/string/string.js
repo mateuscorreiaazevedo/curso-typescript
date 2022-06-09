@@ -1,7 +1,8 @@
-var fistName = 'Mateus';
+"use strict";
+const fistName = 'Mateus';
 // console.log(fistName.toUpperCase());
-var fullName;
-var lastName = 'Azevedo';
+let fullName;
+const lastName = 'Azevedo';
 fullName = fistName + " " + lastName;
 console.log(fullName);
 console.log(typeof fullName);
