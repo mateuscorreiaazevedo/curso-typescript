@@ -2,26 +2,22 @@
 // checando se valor existe
 
 const operations = (arr: number[], operation: 'sum' | 'multiply' | 'divide' | 'sub' | undefined) => {
+  let result = 0
   
   if (operation) {
-    let result = 0
 
     switch(operation) {
       case 'sum':
         result = arr.reduce((i, total) => i + total)
-        console.log(result);
       break
       case 'multiply':
         result = arr.reduce((i, total) => i * total)
-        console.log(result);
       break
       case 'sub':
         result = arr.reduce((i, total) => i - total)
-        console.log(result);
       break
       case 'divide':
         result = arr.reduce((i, total) => i / total)
-        console.log(result);
       break
     }
   } else {
@@ -29,10 +25,11 @@ const operations = (arr: number[], operation: 'sum' | 'multiply' | 'divide' | 's
     
   }
 
+  return result
 }
 
 // operations([1, 2, 3])
-operations([1, 2, 3, 4], 'sum')
-operations([1, 2, 3, 4], 'multiply')
-operations([1, 2, 3, 4], 'sub')
-operations([1, 2, 3, 4], 'divide')
+console.log(operations([1, 2, 3, 4], 'sum'))
+console.log(operations([1, 2, 3, 4], 'multiply'))
+console.log(operations([1, 2, 3, 4], 'sub'))
+console.log(operations([1, 2, 3, 4], 'divide'))
