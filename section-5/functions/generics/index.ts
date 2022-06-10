@@ -20,3 +20,22 @@ function mergeObjs<U, T> (obj1: U, obj2: T) {
 const newObject = mergeObjs({name: 'mateus'}, {age: 30, job: 'dev'})
 
 console.log(newObject);
+
+// Constraints nas Generic Functions
+
+// >>-> As generic functions podem ter seu Escopo reduzido por constraints
+// >>-> Limitação dos tipos que podem ser utilizados
+// >>-> escopo menos abrangente
+
+function biggestNumber<T extends number | string> (a: T, b: T): T {
+  let big: T
+  if(+a > +b) {
+    big = a
+  } else {
+    big = b
+  }
+  return big
+}
+
+
+console.log(biggestNumber(2, 3))
