@@ -21,7 +21,7 @@ const myPen = { engine: false, name: "nanquim", wheels: false };
 // TYPE PARAMETERS
 // ligação entre o tipo genérico e sua chave
 function getSomeKey(obj, key) {
-    return `A chave ${key} está presente no objeto e tem o valor de ${obj[key]}`;
+    // return `A chave ${key} está presente no objeto e tem o valor de ${obj[key]}`
 }
 const server = {
     hd: '2TB',
