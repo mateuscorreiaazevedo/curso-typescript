@@ -18,3 +18,13 @@ const myCar1 = { name: 'argo', engine: '1.3', wheels: 4 };
 const myPen = { engine: false, name: "nanquim", wheels: false };
 // console.log(myCar1.name);
 // console.log(myPen.engine);
+// TYPE PARAMETERS
+// ligação entre o tipo genérico e sua chave
+function getSomeKey(obj, key) {
+    return `A chave ${key} está presente no objeto e tem o valor de ${obj[key]}`;
+}
+const server = {
+    hd: '2TB',
+    ram: '32GB'
+};
+// console.log(getSomeKey(server, 'teste'));
