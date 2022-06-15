@@ -2,7 +2,7 @@
 // protected
 // private
 
-// public
+// >>-> public <-<<
 //  -> todo método ou propriedade da classe pai está acessecível para a classe filha
 
 class C {
@@ -19,7 +19,7 @@ const dIn = new D()
 // console.log(cIn.x)
 // console.log(dIn.x)
 
-//  protected
+// >>-> protected <-<<
 //  -> só pode ser acessado por um método
 
 class E {
@@ -38,4 +38,19 @@ class F extends E {
 
 const fIn = new F()
 
-console.log(fIn.showProtected())
+// console.log(fIn.showProtected())
+
+// >>-> Private <-<<
+// -> só podem ser acessados na classe que os definiu
+
+class PrivateClass {
+  private name = 'Mateus'
+
+  showName() {
+    return this.name
+  }
+}
+
+const privateClass = new PrivateClass()
+
+console.log(privateClass.showName())
